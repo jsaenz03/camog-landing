@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camog: Clinical photo documentation for Australian clinics</title>
-  <meta name="description" content="Your phone is the camera, your PC is the record. Camog keeps patient photos encrypted on your own computer, with consent, audit and one-click A4 case reports. 14-day trial, no card.">
+  <title>Camog: clinical photography app for Australian clinics</title>
+  <meta name="description" content="Clinical photography software for Australian clinics. Camog keeps patient photos encrypted on your own computer, with consent, audit and one-click A4 reports.">
   <meta name="theme-color" content="#F3F7F6" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0D1B1C" media="(prefers-color-scheme: dark)">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://camog.cliniciq.com.au/">
+  <meta property="og:url" content="https://camog.jsaenz.au/">
   <meta property="og:title" content="Patient photos don't belong in your camera roll.">
   <meta property="og:description" content="Camog: clinical photo documentation for Australian clinics. Encrypted, on your own computer. 14-day free trial, no card.">
-  <meta property="og:image" content="https://camog.cliniciq.com.au/assets/og.jpg">
+  <meta property="og:image" content="https://camog.jsaenz.au/assets/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="canonical" href="https://camog.cliniciq.com.au/">
+  <link rel="canonical" href="https://camog.jsaenz.au/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
@@ -29,22 +29,183 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Camog",
-    "applicationCategory": "MedicalApplication",
-    "operatingSystem": "Windows 10 or later, macOS",
-    "description": "Local-first clinical photo documentation for Australian clinics. Photos are encrypted and stored on the clinic's own computer.",
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "179",
-      "highPrice": "799",
-      "priceCurrency": "AUD",
-      "offerCount": "3"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://camog.jsaenz.au/#org",
+        "name": "ClinicIQ Solutions",
+        "url": "https://cliniciq.com.au",
+        "logo": "https://camog.jsaenz.au/assets/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Wollongong",
+          "addressRegion": "NSW",
+          "addressCountry": "AU"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "admin@cliniciq.com.au"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://camog.jsaenz.au/#site",
+        "url": "https://camog.jsaenz.au/",
+        "name": "Camog",
+        "inLanguage": "en-AU",
+        "publisher": { "@id": "https://camog.jsaenz.au/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://camog.jsaenz.au/#app",
+        "name": "Camog",
+        "url": "https://camog.jsaenz.au/",
+        "description": "Clinical photo documentation for Australian clinics. Your phone is the camera, your PC is the record: photos are AES-256 encrypted and stored on the clinic's own computer, never uploaded.",
+        "applicationCategory": "MedicalApplication",
+        "operatingSystem": "Windows 10 or later, macOS",
+        "image": "https://camog.jsaenz.au/assets/camog-dashboard.webp",
+        "screenshot": "https://camog.jsaenz.au/assets/camog-dashboard.webp",
+        "featureList": [
+          "Phone pairs with the clinic computer by QR code and becomes the camera",
+          "Body map capture and lesion series over time",
+          "Recorded consent with scope: care, education or research",
+          "Append-only audit log with CSV export",
+          "AES-256 encryption at rest, no cloud storage",
+          "Works fully offline",
+          "Side-by-side and overlay photo comparison",
+          "One-click A4 PDF case reports"
+        ],
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Solo",
+            "description": "1 device seat. For solo practitioners.",
+            "price": "179",
+            "priceCurrency": "AUD",
+            "url": "https://camog-license.cliniciq.com.au/buy",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Practice",
+            "description": "3 device seats. For small practices and specialists.",
+            "price": "399",
+            "priceCurrency": "AUD",
+            "url": "https://camog-license.cliniciq.com.au/buy",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Clinic",
+            "description": "10 device seats. For multi-computer clinics.",
+            "price": "799",
+            "priceCurrency": "AUD",
+            "url": "https://camog-license.cliniciq.com.au/buy",
+            "availability": "https://schema.org/InStock"
+          }
+        ],
+        "publisher": { "@id": "https://camog.jsaenz.au/#org" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "Set up Camog in minutes",
+        "description": "No server to buy, no account to create, and nothing for your IT person to vet.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Install",
+            "text": "Install Camog from the Microsoft Store on Windows 10 or 11, or the macOS build for Apple Silicon and Intel."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Pair",
+            "text": "Open Camog on the clinic computer and scan the QR code with your phone. From then on the phone is the clinic camera."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Photograph",
+            "text": "Capture to the body map, compare across visits, and file the A4 case report."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Camog?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Camog is clinical photo documentation software for Australian clinics. Your phone is the camera and your clinic computer is the record: photos are captured against the right patient, encrypted at rest, and never uploaded to a cloud."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do my photos ever leave the clinic computer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Photos are stored as AES-256 encrypted files on your own machine and never uploaded. The only network traffic Camog generates is licence activation, which carries a device identifier and nothing else."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens when the 14-day trial ends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Camog keeps working in read-only mode. You can browse, compare and export, but new captures need a licence. Your records are never held hostage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Capture, review, compare and case reports all work with no internet connection. Activation is the one moment Camog needs to reach the licence server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Windows or Mac?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both. Windows 10 and 11 install straight from the Microsoft Store, with updates handled by the Store. macOS builds for Apple Silicon and Intel are available as a direct download."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I get photos out of Camog?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Any time. Photos export as JPEGs, case reports as PDFs, and the audit log as CSV. If you ever leave, your data leaves with you."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does Camog cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Solo is A$179 a year for one device seat, Practice is A$399 a year for three seats, and Clinic is A$799 a year for ten seats. Every licence starts with a 14-day trial: full function, no card."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does this compare on price?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Purpose-built clinical photography subscriptions commonly run to thousands of dollars per clinician per year. Camog Practice is A$399 a year for three seats, about A$133 per seat."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
-<body>
+<body id="top">
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -67,7 +228,7 @@
   <main id="main">
 
     <!-- Hero -->
-    <section class="hero" id="top">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="chip reveal">For Australian clinics</p>
@@ -276,6 +437,10 @@
         <h2 class="reveal">Camog FAQ</h2>
         <div class="faq-list reveal">
           <details>
+            <summary>What is Camog?</summary>
+            <p>Camog is clinical photo documentation software for Australian clinics. Your phone is the camera and your clinic computer is the record: photos are captured against the right patient, encrypted at rest, and never uploaded to a cloud.</p>
+          </details>
+          <details>
             <summary>Do my photos ever leave the clinic computer?</summary>
             <p>No. Photos are stored as AES-256 encrypted files on your own machine and never uploaded. The only network traffic Camog generates is licence activation, which carries a device identifier and nothing else.</p>
           </details>
@@ -294,6 +459,10 @@
           <details>
             <summary>Can I get photos out of Camog?</summary>
             <p>Any time. Photos export as JPEGs, case reports as PDFs, and the audit log as CSV. If you ever leave, your data leaves with you.</p>
+          </details>
+          <details>
+            <summary>How much does Camog cost?</summary>
+            <p>Solo is A$179 a year for one device seat, Practice is A$399 a year for three seats, and Clinic is A$799 a year for ten seats. Every licence starts with a 14-day trial: full function, no card.</p>
           </details>
           <details>
             <summary>How does this compare on price?</summary>

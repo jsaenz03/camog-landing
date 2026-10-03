@@ -29,10 +29,10 @@ Connect this repo to Netlify with: build command **none**, publish directory
 
 ## Before going live
 
-- **Domain**: the canonical URL and OG tags currently point at
-  `https://camog.cliniciq.com.au/`. If the site lands on a different domain,
-  update `rel="canonical"`, the `og:url` and `og:image` meta tags in
-  `index.html`.
+- **Domain**: the canonical URL and OG tags point at `https://camog.jsaenz.au/`.
+  If the site lands on a different domain, update `rel="canonical"`, the
+  `og:url` and `og:image` meta tags, the `@id`/`url` values in the JSON-LD
+  schema block, `robots.txt`, `sitemap.xml` and `llms.txt`.
 - **macOS link**: the download CTA points at
   `github.com/jsaenz03/camorg/releases/latest`; keep it in sync with how
   builds are actually distributed.
@@ -48,7 +48,11 @@ facts change). Licence and legal links point at
 
 ```sh
 node scripts/check.mjs
+node scripts/seo-check.mjs
 ```
 
-Asserts every local asset reference resolves, every in-page anchor has a
-target, external links are https, and no em/en dashes slipped into the copy.
+The first asserts every local asset reference resolves, every in-page anchor
+has a target, external links are https, and no em/en dashes slipped into the
+copy. The second asserts the JSON-LD schema parses, the FAQPage markup mirrors
+the visible FAQ word for word, meta lengths stay in range, and self URLs stay
+on the site domain.

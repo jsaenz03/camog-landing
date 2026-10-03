@@ -1,0 +1,25 @@
+# Camog
+
+> Camog is clinical photo documentation software for Australian clinics, built by ClinicIQ Solutions (Wollongong NSW). The clinic's phone is the camera and the clinic's own computer is the record: patient photos are captured against the right patient, AES-256 encrypted at rest, and never uploaded to a cloud. Recorded consent, an append-only audit log, and one-click A4 case reports are built in.
+
+Camog works fully offline; the only network call it makes is licence activation, which carries no photographs. It runs on Windows 10 and 11 (Microsoft Store) and macOS, Apple Silicon and Intel (direct download).
+
+## Pricing
+
+- [Pricing (markdown)](https://camog.jsaenz.au/pricing.md): Solo A$179/year (1 device seat), Practice A$399/year (3 seats), Clinic A$799/year (10 seats). Every licence starts with a 14-day trial: full function, no card.
+- [Licences and checkout](https://camog-license.cliniciq.com.au/buy)
+
+## Product
+
+- [Camog home](https://camog.jsaenz.au/): what Camog does, how it works, privacy, pricing and FAQ
+- [Download for Windows](https://apps.microsoft.com/detail/9P26QN81HW16)
+- [Download for macOS](https://github.com/jsaenz03/camorg/releases/latest)
+
+## Legal
+
+- [Privacy policy](https://camog-license.cliniciq.com.au/legal/privacy-policy.md)
+- [Terms of service](https://camog-license.cliniciq.com.au/legal/terms-of-service.md)
+
+## Contact
+
+- Support: admin@cliniciq.com.au

@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://camog.jsaenz.au/sitemap.xml
