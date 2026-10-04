@@ -241,14 +241,24 @@
         </div>
         <div class="hero-shot reveal">
           <div class="shot-wrap">
-            <figure class="shot">
-              <div class="shot-bar" aria-hidden="true">
+            <button class="shot shot-live" id="film-open" type="button"
+                    aria-haspopup="dialog" aria-controls="film-modal"
+                    aria-label="Play the Camog product film. Opens fullscreen; scroll plays the film.">
+              <span class="shot-bar" aria-hidden="true">
                 <span></span><span></span><span></span>
                 <span class="shot-title">Camog, Clinical Photo Documentation</span>
-              </div>
-              <img src="assets/camog-dashboard.webp" width="1400" height="763" fetchpriority="high"
-                   alt="The Camog dashboard: patient list, capture statistics, review timeline and recent photo activity.">
-            </figure>
+                <span class="shot-live-tag">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                  Watch the film
+                </span>
+              </span>
+              <span class="shot-screen">
+                <img class="shot-frame is-current" src="film/frames-nas/f_001.jpg" width="960" height="534" fetchpriority="high"
+                     alt="Frame from the Camog product film: the phone in hand at the bedside, capture app open.">
+                <img class="shot-frame" src="film/frames-nas/f_040.jpg" width="960" height="534" loading="lazy" alt="" aria-hidden="true">
+                <img class="shot-frame" src="film/frames-nas/f_120.jpg" width="960" height="534" loading="lazy" alt="" aria-hidden="true">
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -502,6 +512,18 @@
       <p class="footer-fine">Camog is an independent product of ClinicIQ Solutions. Patient photographs never leave your computer, and ClinicIQ Solutions has no access to them.</p>
     </div>
   </footer>
+
+  <!-- Product film: opens from the hero shot, collapses back into it.
+       The iframe src is set on first open so the 3.3 MB film never loads
+       for visitors who don't press play. -->
+  <div class="film-modal" id="film-modal" hidden>
+    <div class="film-dialog" role="dialog" aria-modal="true" aria-label="Camog product film" tabindex="-1">
+      <iframe class="film-frame" id="film-frame" title="Camog product film" data-src="film/index.html" tabindex="0"></iframe>
+      <button class="film-close" id="film-close" type="button" aria-label="Close the product film">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
